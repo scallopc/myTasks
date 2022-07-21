@@ -2,7 +2,7 @@
 $primary-color: #610094;
 $secundary-color: #3F0071;
 $background-color: #222;
-
+$text-color: #eee;
 
 body {
   margin: 0;
@@ -12,6 +12,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: $background-color;
+  color: $text-color;
 }
 
 code {
