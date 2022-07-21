@@ -1,8 +1,9 @@
 import React from 'react';
+import './Task.scss';
 
 const Task = ({ task }) => {
     return (
-        <div>{task.title}</div>
+        <div className="task-container">{task.title}</div>
     );
 }
 
