@@ -21,6 +21,8 @@ export const Container = styled.div`
   border: 2px solid ${(props) => props.theme.colors.primary};
   padding: 30px;
   border-radius: 10px;
+  min-width: 250px;
+
 `;
 
 export const HeaderContainer = styled.div`

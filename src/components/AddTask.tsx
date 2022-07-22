@@ -7,20 +7,22 @@ const TaskContainer = styled.div`
 margin: 15px 0;
 width: 100%;
 display: flex;
+flex-wrap: wrap;
+gap: 10px
 `
 
 const Input = styled.input`
 background-color:${props => props.theme.colors.backgroundSecundary};
+color:${props => props.theme.colors.text};
 height: 40px;
 padding: 0 10px;
 border: none;
 border-radius: 5px;
 flex: 2;
-color:${props => props.theme.colors.text};
 `
 const ButtonContainer = styled.div`
-margin-left: 10px;
 flex: 1;
+
 `
 
 
