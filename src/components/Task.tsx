@@ -1,4 +1,4 @@
-import { FaTrashAlt, FaInfoCircle, FaCheck } from "react-icons/fa";
+import { BsFillTrashFill, BsInfoCircleFill, BsCheck } from "react-icons/bs";
 import styled from 'styled-components';
 
 const TaskContainer = styled.div`
@@ -25,9 +25,9 @@ export default function Task({ task, handleTaskClick, handleTaskDelete }: { task
             {task.title}
 
             <IconsContainer>
-                <FaCheck className='icons' onClick={() => handleTaskClick(task.id)} />
-                <FaInfoCircle/>
-                <FaTrashAlt className='icons' onClick={() => handleTaskDelete(task.id)} />
+                <BsCheck className='icons' onClick={() => handleTaskClick(task.id)} />
+                <BsInfoCircleFill/>
+                <BsFillTrashFill className='icons' onClick={() => handleTaskDelete(task.id)} />
             </IconsContainer>
 
         </TaskContainer>
