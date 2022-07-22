@@ -1,4 +1,4 @@
-import Task from "../task/Task";
+import Task from "./Task";
 
 export default function Tasks({ tasks, handleTaskClick, handleTaskDelete }: { tasks: any; handleTaskClick: any; handleTaskDelete: any }) {
     return (

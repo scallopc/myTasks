@@ -1,13 +1,16 @@
 import { createGlobalStyle } from "styled-components";
 
 
-export const GlobalStyle = createGlobalStyle` {
-
-  
-  colors: #F2711C;
-  --sui-colors-yellow: #FBBD08;
-  --sui-colors-olive: #B5CC18;
-
-
-}
+export default createGlobalStyle`
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    background: ${props => props.theme.colors.background};
+    font-size: 14px;
+    color: ${props => props.theme.colors.text};
+    font-family: sans-serif;
+  }
 `;
