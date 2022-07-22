@@ -1,8 +1,13 @@
-/* varibles */
-$primary-color: #610094;
+/* variables */
+$primary-color: #FF8E00;
 $secundary-color: #3F0071;
 $background-color: #222;
 $text-color: #eee;
+
+.variables {
+  --primary-color: #FF8E00;
+
+}
 
 body {
   margin: 0;

@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import Button from '../button/Button';
 import './AddTask.scss';
 
-const AddTask = ({handleTaskAddition}) => {
+export default function AddTask({handleTaskAddition}:{handleTaskAddition: any}) {
     const [inputData, setInputData] = useState("");
 
-    const handleInputChange = (e) => {
+    const handleInputChange = (e: any) => {
         setInputData(e.target.value);
     };
 
@@ -29,4 +29,3 @@ const AddTask = ({handleTaskAddition}) => {
     );
 };
 
-export default AddTask;
