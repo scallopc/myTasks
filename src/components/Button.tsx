@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-
 const ButtonStyled = styled.button``;
 
 const Button = styled(ButtonStyled)`
@@ -13,11 +12,10 @@ const Button = styled(ButtonStyled)`
   font-weight: 600;
   color: ${(props) => props.theme.colors.text};
   cursor: pointer;
-
-  &:hover{
+  transition: all 0.5s ease;
+  &:hover {
     background-color: ${(props) => props.theme.colors.secundary};
   }
-
 `;
 
 export default function button({

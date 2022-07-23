@@ -1,5 +1,8 @@
-import { BsFillTrashFill, BsInfoCircleFill, BsCheckLg } from "react-icons/bs";
 import styled from "styled-components";
+import { BsFillTrashFill, BsInfoCircleFill, BsCheckLg } from "react-icons/bs";
+import { useHistory } from "react-router-dom";
+
+
 
 const TaskContainer = styled.div`
   background-color: ${(props) => props.theme.colors.backgroundSecundary};
@@ -9,6 +12,7 @@ const TaskContainer = styled.div`
   border-radius: 5px;
   justify-content: space-between;
   align-items: center;
+  gap: 3px;
 `;
 
 const IconsContainer = styled.div`
@@ -19,6 +23,7 @@ const IconsContainer = styled.div`
   & .icons {
     cursor: pointer;
     font-size: 16px;
+    transition: all 0.5s ease;
 
     &:hover {
         color: ${(props) => props.theme.colors.primary};
@@ -36,6 +41,13 @@ export default function Task({
   handleTaskClick: any;
   handleTaskDelete: any;
 }) {
+
+  const history = useHistory();
+
+  const handleTaskDetails = () => {
+    history.push(`/${task.title}`);
+  };
+
   return (
     <TaskContainer
       style={task.completed ? { borderLeft: "6px solid #FF8E00" } : {}}
@@ -44,7 +56,7 @@ export default function Task({
 
       <IconsContainer>
         <BsCheckLg className="icons" onClick={() => handleTaskClick(task.id)} />
-        <BsInfoCircleFill className="icons" />
+        <BsInfoCircleFill className="icons" onClick={handleTaskDetails}/>
         <BsFillTrashFill  className="icons"  onClick={() => handleTaskDelete(task.id)}
         />
       </IconsContainer>
